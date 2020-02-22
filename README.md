@@ -1,3 +1,5 @@
+![Docker Image CI](https://github.com/pahud/cdk-remote/workflows/Docker%20Image%20CI/badge.svg)
+
 # cdk-remote
 
 `cdk-remote` is a docker image to help you deploy AWS CDK apps without installing `aws-cdk CLI` at local or even without `npm` or `node` required.
