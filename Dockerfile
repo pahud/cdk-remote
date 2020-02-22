@@ -1,15 +1,14 @@
-FROM node:10-alpine
+FROM node:lts-alpine as runtime
 
-ENV AWS_DEFAULT_REGION=us-east-1
+RUN apk add --no-cache git bash
 
-RUN \
-	mkdir -p /aws && \
-	apk -Uuv add groff less python3 bash git && \
-	pip3 install awscli && \
-	rm /var/cache/apk/*
+WORKDIR /workdir
 
 RUN npm i -g aws-cdk
 
-COPY entrypoint.sh /root/
+COPY entrypoint.sh /entrypoint.sh
 
-CMD ["bash", "-c", "/root/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
+
+ENV AWS_DEFAULT_REGION='us-west-2'
+

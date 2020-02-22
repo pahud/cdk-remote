@@ -1,3 +1,0 @@
-#!/bin/bash
-
-docker run -v ${HOME}/.aws:/root/.aws -e INPUT="${1}" -ti pahud/cdk-remote:latest
