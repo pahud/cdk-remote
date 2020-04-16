@@ -21,6 +21,9 @@ $ alias cdk-remote="docker run -ti \
 To deploy CDK application hosted on https://github.com/pahud/aws-cdk-serverless-sample
 
 ```bash
+# view the diff before deployment
+$ cdk-remote github.com/pahud/aws-cdk-serverless-sample diff
+# deploy it
 $ cdk-remote github.com/pahud/aws-cdk-serverless-sample deploy
 ```
 
