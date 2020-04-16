@@ -1,7 +1,9 @@
 #!/bin/bash
 
-CDK_CMD=$1
-REPO=$2
+
+REPO=$1
+shift
+CDK_CMD=$@
 
 GIT_BASE_PATH=$(echo $REPO | cut -d/ -f1-3)
 GIT_EXTEND_PATH=$(echo $REPO | cut -d/ -f4-)

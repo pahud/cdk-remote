@@ -6,21 +6,30 @@
 
 `pahud/cdk-remote:latest`
 
-## Exsample
+## Example
 
-To deploy CDK application hosted on `https://github.com/pahud/aws-cdk-serverless-sample`:
-
-```bash
+```sh
 # make 'cdk-remote' alias
-$ alias cdk-remote="docker run -ti -v ${HOME}/.aws:/root/.aws pahud/cdk-remote"
-$ cdk-remote deploy github.com/pahud/aws-cdk-serverless-sample
+$ alias cdk-remote="docker run -ti \
+-e AWS_DEFAULT_REGION='ap-northeast-1' \
+-e AWS_REGION=${AWS_REGION-${AWS_DEFAULT_REGION}} \
+-v ${HOME}/.aws:/root/.aws pahud/cdk-remote"
 ```
 
-![](https://pbs.twimg.com/media/ERXH9RkUwAA-330?format=jpg&name=4096x4096)
+To deploy CDK application hosted on https://github.com/pahud/aws-cdk-serverless-sample
 
-![](https://pbs.twimg.com/media/ERXH9RmU4AAGsWS?format=jpg&name=4096x4096)
+```bash
+$ cdk-remote github.com/pahud/aws-cdk-serverless-sample deploy
+```
 
-![](https://pbs.twimg.com/media/ERXH9RoUYAAfKbm?format=jpg&name=4096x4096)
+To deploy the `EksStack` from https://github.com/pahud/cdk-samples/typescript
+
+```bash
+# view the diff before deployment
+$ cdk-remote github.com/pahud/cdk-samples/typescript diff EksStack
+# deploy it
+$ cdk-remote github.com/pahud/cdk-samples/typescript deploy EksStack
+```
 
 
 ## Security

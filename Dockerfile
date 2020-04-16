@@ -10,5 +10,5 @@ COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-ENV AWS_DEFAULT_REGION='us-west-2'
+ENV AWS_DEFAULT_REGION='us-east-1'
 
