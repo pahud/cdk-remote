@@ -1,6 +1,4 @@
-![Docker Image CI](https://github.com/pahud/cdk-remote/workflows/Docker%20Image%20CI/badge.svg)
-
-![cdk-remote: Experimental](https://img.shields.io/badge/cdk--remote-experimental-important.svg?style=for-the-badge)
+![Docker Image CI](https://github.com/pahud/cdk-remote/workflows/Docker%20Image%20CI/badge.svg) ![cdk-remote: Experimental](https://img.shields.io/badge/cdk--remote-experimental-important.svg?style=plastic)
 
 
 # cdk-remote
