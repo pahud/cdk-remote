@@ -28,14 +28,18 @@ $ cdk-remote github.com/pahud/aws-cdk-serverless-sample diff
 $ cdk-remote github.com/pahud/aws-cdk-serverless-sample deploy
 ```
 
-To deploy the `EksStack` from https://github.com/pahud/cdk-samples/typescript
+To deploy the `Bottlerocket` stack with Amazon EKS cluster from https://github.com/pahud/cdk-samples/typescript
 
 ```bash
 # view the diff before deployment
-$ cdk-remote github.com/pahud/cdk-samples/typescript diff EksStack
+$ cdk-remote github.com/pahud/cdk-samples/typescript diff Bottlerocket
 # deploy it
-$ cdk-remote github.com/pahud/cdk-samples/typescript deploy EksStack
+$ cdk-remote github.com/pahud/cdk-samples/typescript deploy Bottlerocket
 ```
+
+![](https://pbs.twimg.com/media/EV2Oo_3U4AAZWSJ?format=jpg&name=4096x4096)
+
+![](https://pbs.twimg.com/media/EV2O3S_U4AEV5Yn?format=jpg&name=4096x4096)
 
 
 ## Security
