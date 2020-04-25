@@ -10,12 +10,15 @@
 
 ## Example
 
+create a `cdk-remote` shell script under your system `$PATH` and chmod +x it
+
 ```sh
-# make 'cdk-remote' alias
-$ alias cdk-remote="docker run -ti \
--e AWS_DEFAULT_REGION='ap-northeast-1' \
+#!/bin/bash
+
+docker run -ti \
+-e AWS_DEFAULT_REGION={AWS_DEFAULT_REGION-us-east-1} \
 -e AWS_REGION=${AWS_REGION-${AWS_DEFAULT_REGION}} \
--v ${HOME}/.aws:/root/.aws pahud/cdk-remote"
+-v ${HOME}/.aws:/root/.aws pahud/cdk-remote $@
 ```
 
 To deploy CDK application hosted on https://github.com/pahud/aws-cdk-serverless-sample

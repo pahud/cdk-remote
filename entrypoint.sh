@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export AWS_REGION
+export AWS_DEFAULT_REGION
 
 REPO=$1
 shift
